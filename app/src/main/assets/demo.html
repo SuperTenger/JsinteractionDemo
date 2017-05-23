@@ -1,0 +1,27 @@
+<html>
+
+<body>
+<p>
+    <xmp id="show">
+    </xmp>
+</p>
+<p>
+    <input type="button" id="enter1" value="JS调用JAVA方法" onclick="testClick();"/>
+</p>
+</body>
+
+<script>
+        function testClick() {
+            var str = window.control.javaFunc("JS调用JAVA方法")
+            document.getElementById("show").innerHTML = str
+        }
+
+        function jsfunction(){
+            document.getElementById("show").innerHTML = "调用JS方法成功"
+            window.control.responseMsg("JS返回值")
+        }
+
+
+</script>
+
+</html>
